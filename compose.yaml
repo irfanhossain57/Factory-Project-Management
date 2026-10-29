@@ -1,0 +1,10 @@
+services:
+  traffic:
+    build: .
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - traffic-data:/app/data
+    restart: unless-stopped
+volumes:
+  traffic-data:
